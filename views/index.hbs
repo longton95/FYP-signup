@@ -1,0 +1,71 @@
+<div class="container">
+   <div class="row justify-content-md-center mt-5">
+      <div class="col-md-8">
+         <div class="card">
+            <div class="card-header">Register</div>
+            <div class="card-body">
+               <form action="/saveUser" method="post" enctype="application/x-www-form-urlencoded">
+
+                  <div class="form-group row">
+                     <label class="col-lg-4 col-form-label text-lg-right">Username</label>
+                     <div class="col-lg-6">
+                        <input type="text" class="form-control" name="username" required>
+                     </div>
+                  </div>
+
+                  <div class="form-group row">
+                     <label class="col-lg-4 col-form-label text-lg-right">First Name</label>
+                     <div class="col-lg-6">
+                        <input type="text" class="form-control" name="firstName" required>
+                     </div>
+                  </div>
+
+                  <div class="form-group row">
+                     <label class="col-lg-4 col-form-label text-lg-right">Last Name</label>
+
+                     <div class="col-lg-6">
+                        <input type="text" class="form-control" name="lastName" required>
+                     </div>
+                  </div>
+
+                  <div class="form-group row">
+                     <label class="col-lg-4 col-form-label text-lg-right">E-Mail Address</label>
+
+                     <div class="col-lg-6">
+                        <input type="email" class="form-control" name="email" required>
+                     </div>
+                  </div>
+
+                  <div class="form-group row">
+                     <label class="col-lg-4 col-form-label text-lg-right">Password</label>
+
+                     <div class="col-lg-6">
+                        <input type="password" class="form-control" name="password" required>
+                        {{#if errors.password}}
+                        {{errors.password.msg}}
+                        {{/if}}
+                     </div>
+                  </div>
+
+                  <div class="form-group row">
+                     <label class="col-lg-4 col-form-label text-lg-right">Confirm Password</label>
+
+                     <div class="col-lg-6">
+                        <input type="password" class="form-control" name="password_confirmation" required>
+                        {{#if errors.password}}
+                        {{errors.password.msg}}
+                        {{/if}}
+                     </div>
+                  </div>
+
+                  <div class="form-group row">
+                     <div class="col-lg-6 offset-lg-4">
+                        <button type="submit" class="btn btn-primary">Register</button>
+                     </div>
+                  </div>
+               </form>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
